@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "perfect_purchase_2"
+version = "0.1.0"
+description = "LangChain AI agent with CLI interface"
+requires-python = ">=3.11"
+dependencies = [
+    "python-dotenv==1.0.0",
+    "langchain==0.3.0",
+    "langchain-openai==0.2.0",
+    "langchain-anthropic==0.2.0",
+    "langgraph-cli[inmem]",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
